@@ -68,3 +68,13 @@
 ..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\..\output\beep.o: ..\..\Drivers\CMSIS\Include\core_cm4.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h
+..\..\output\beep.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h

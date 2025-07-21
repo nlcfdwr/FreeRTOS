@@ -70,6 +70,16 @@
 ..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\..\output\heap_4.o: ..\..\Drivers\CMSIS\Include\core_cm4.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h
+..\..\output\heap_4.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h
 ..\..\output\heap_4.o: ..\..\Drivers\./SYSTEM/usart/usart.h
 ..\..\output\heap_4.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\heap_4.o: ..\..\Middlewares\FreeRTOS\include\projdefs.h

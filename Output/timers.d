@@ -70,6 +70,16 @@
 ..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\..\output\timers.o: ..\..\Drivers\CMSIS\Include\core_cm4.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h
+..\..\output\timers.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h
 ..\..\output\timers.o: ..\..\Drivers\./SYSTEM/usart/usart.h
 ..\..\output\timers.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\timers.o: ..\..\Middlewares\FreeRTOS\include\projdefs.h

@@ -67,3 +67,13 @@
 ..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\..\output\sys.o: ..\..\Drivers\CMSIS\Include\core_cm4.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h
+..\..\output\sys.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h

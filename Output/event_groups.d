@@ -70,6 +70,16 @@
 ..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\..\output\event_groups.o: ..\..\Drivers\CMSIS\Include\core_cm4.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usart.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_dma.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_rcc.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_bus.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_cortex.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_system.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_utils.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_pwr.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_gpio.h
+..\..\output\event_groups.o: ..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_exti.h
 ..\..\output\event_groups.o: ..\..\Drivers\./SYSTEM/usart/usart.h
 ..\..\output\event_groups.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\event_groups.o: ..\..\Middlewares\FreeRTOS\include\projdefs.h

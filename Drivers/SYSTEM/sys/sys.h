@@ -28,6 +28,17 @@
 #include "core_cm4.h"
 #include "stm32f4xx_hal.h"
 
+#include "stm32f4xx_ll_usart.h"
+#include "stm32f4xx_ll_dma.h"
+#include "stm32f4xx_ll_rcc.h"
+#include "stm32f4xx_ll_bus.h"
+#include "stm32f4xx_ll_cortex.h"
+#include "stm32f4xx_ll_system.h"
+#include "stm32f4xx_ll_utils.h"
+#include "stm32f4xx_ll_pwr.h"
+#include "stm32f4xx_ll_gpio.h"
+#include "stm32f4xx_ll_exti.h"
+
 
 /**
  * SYS_SUPPORT_OS用于定义系统文件夹是否支持OS

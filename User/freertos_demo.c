@@ -1,8 +1,10 @@
 #include "freertos_demo.h"
-#include "./SYSTEM/usart/usart.h"
 #include "./BSP/LED/led.h"
 #include "./BSP/LCD/lcd.h"
+#include "./BSP/KEY/key.h"
 #include "./BSP/DHT11/driver_dht11.h"
+#include "dev_uart.h"
+
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -26,8 +28,12 @@ void task2(void *pvParameters);             /* 任务函数 */
 #define TASK3_PRIO      4                   /* 任务优先级 */
 #define TASK3_STK_SIZE  128                 /* 任务堆栈大小 */
 TaskHandle_t            Task3Task_Handler;  /* 任务句柄 */
-void task3(void *pvParameters);             /* 任务函数 */
+void task3_lcd(void *pvParameters);             /* 任务函数 */
 
+#define UART_TASK_PRIO      5
+#define UART_TASK_STK_SIZE  256
+TaskHandle_t UartTask_Handler;
+void uart_loop_task(void *pvParameters);
 
 void freertos_demo(void)
 {
@@ -59,12 +65,20 @@ void start_task(void *pvParameters)
                 (UBaseType_t    )TASK2_PRIO,
                 (TaskHandle_t*  )&Task2Task_Handler);
 				
-	xTaskCreate((TaskFunction_t )task3,
+	xTaskCreate((TaskFunction_t )task3_lcd,
                 (const char*    )"task3",
                 (uint16_t       )TASK3_STK_SIZE,
                 (void*          )NULL,
                 (UBaseType_t    )TASK3_PRIO,
                 (TaskHandle_t*  )&Task3Task_Handler);
+				
+	xTaskCreate((TaskFunction_t )uart_loop_task,
+            (const char*    )"uart_loop",
+            (uint16_t       )UART_TASK_STK_SIZE,
+            (void*          )NULL,
+            (UBaseType_t    )UART_TASK_PRIO,
+            (TaskHandle_t*  )&UartTask_Handler);
+
 				
     vTaskDelete(StartTask_Handler); /* 删除开始任务 */
     taskEXIT_CRITICAL();            /* 退出临界区 */
@@ -91,7 +105,7 @@ void task2(void *pvParameters)
     }
 }
 
-void task3(void *pvParameters)
+void task3_lcd(void *pvParameters)
 {
 	extern uint8_t Data[5];
 	char str[32];
@@ -104,10 +118,26 @@ void task3(void *pvParameters)
             lcd_show_string(40, 10, 220, 24, 24, str, BLUE);
             sprintf(str, "Humi: %d %%", Humi);
             lcd_show_string(40, 40, 220, 24, 24, str, RED);
-//			lcd_show_num(40, 10, Humi, 2, 32, RED);
-//			lcd_show_num(40, 50, Temp, 2, 32, RED);
 		}
-
         vTaskDelay(1000);  
     }
 }
+
+void uart_loop_task(void *pvParameters)
+{
+    uint8_t buf[256];
+    uint16_t size;
+
+    while (1)
+    {
+        // UART1 环回
+        size = uart_read(DEV_UART1, buf, sizeof(buf));//STM32从DMA+FIFO中读取从SSCOM发送的数据
+        if (size > 0)
+            uart_write(DEV_UART1, buf, size);//此时STM32是发送者，通过这句指令可以在下方窗口看到串口回显
+        // 启动 DMA 发送（用于将 FIFO 中数据刷新到串口）
+        uart_poll_dma_tx(DEV_UART1);
+        // 任务延时（可调）避免 CPU 占用过高
+        vTaskDelay(10);  // 每1ms调度一次，可根据性能调整
+    }
+}
+
